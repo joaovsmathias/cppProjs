@@ -1,0 +1,6 @@
+# Ignorar todos os executáveis (.exe)
+*.exe
+
+# Ignorar pasta oculta e arquivos da configuração da IDE VS Code
+.vscode/
+
