@@ -1,0 +1,32 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "name": "(MSVC) Debug",
+          "type": "cppvsdbg",
+          "request": "launch",
+          "program": "${workspaceFolder}\\${fileBasenameNoExtension}.exe", // Caminho do executável
+          "args": [],                       // Argumentos do programa (se necessário)
+          "stopAtEntry": false,             // Parar no início do programa
+          "cwd": "${workspaceFolder}",      // Diretório de trabalho
+          "environment": [],
+          "console": "integratedTerminal",  // Exibir no terminal integrado
+          "preLaunchTask": "Compilar com MSVC"  // Tarefa de pré-compilação
+      },
+      {
+        "name": "C++: Executar arquivo compilado com GDB",
+        "type": "cppdbg",
+        "request": "launch",
+        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",  // Caminho para o executável compilado
+        "args": [],  // Argumentos do programa, se necessário
+        "stopAtEntry": false,  // Não parar na entrada
+        "cwd": "${fileDirname}",  // Diretório de trabalho
+        "MIMode": "gdb",  // Usar GDB como depurador
+        "miDebuggerPath": "C:\\msys64\\mingw64\\bin\\gdb.exe",  // Caminho para o GDB
+        "preLaunchTask": "C/C++: g++ 14 -> C17",  // Tarefa de build já configurada
+        "externalConsole": true,  
+        "internalConsoleOptions": "neverOpen"  // Não abrir o console interno ao iniciar
+    }
+      
+  ]
+}
